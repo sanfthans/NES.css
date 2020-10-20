@@ -12,13 +12,18 @@
     box-shadow: inset -4px -4px $shadow;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
+    color: $color;
+    text-decoration: none;
     background-color: $hover-background;
 
     &::after {
       box-shadow: inset -6px -6px $shadow;
     }
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 6px rgba($shadow, 0.3);
   }
 
   &:active:not(.is-disabled)::after {
@@ -32,7 +37,7 @@
 
   position: relative;
   display: inline-block;
-  padding: 10px 12px;
+  padding: 6px 8px;
   margin: $border-size;
   text-align: center;
   vertical-align: middle;
@@ -72,5 +77,11 @@
     &.is-#{nth($type, 1)} {
       @include btn-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
     }
+  }
+
+  input[type="file"] {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
   }
 }

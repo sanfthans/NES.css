@@ -1,10 +1,10 @@
 <div align="center">
   <a href="https://nostalgic-css.github.io/NES.css/" target="_blank"><img src="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" alt="NES.css: NES-style  CSS framework" style="max-width: 100%;" width="600" height="315"></a>
 
-  <a href="README.md">English</a> / <a href=".github/README-jp.md">日本語</a> / <a href="README-zh-CN.md">简体中文</a> / <a href=".github/README-pt-BR.md">Português</a>
+  <a href="README.md">English</a> / <a href=".github/README-jp.md">日本語</a> / <a href="README-zh-CN.md">简体中文</a> / <a href=".github/README-pt-BR.md">Português</a>　/ <a href=".github/README-ru.md">Русский</a>
 </div>
 
-NES.css is a **NES-style(8bit-like)** CSS Framework.
+NES.css es un **NES-style(8bit-like)** CSS Framework.
 
 [![Gitter][gitter-badge]][gitter] [![Commitizen friendly][commitizen-badge]][commitizen]
 
@@ -23,8 +23,34 @@ yarn add nes.css
 ```
 
 Nuestro `package.json` contiene metadata adicional bajo las siguientes keys:
-* `sass` - path to our main Sass source file
-* `style` - path to our non-minified CSS
+* `sass` - Ruta a nuestro archivo fuente principal de Sass
+* `style` - Ruta a nuestro CSS no minificado
+
+##### AltCSS(sass, scss...)
+
+```scss
+// style.scss
+@import "./node_modules/nes.css/css/nes.css"
+```
+
+##### JavaScript
+
+```js
+// script.js
+import "nes.css/css/nes.min.css";
+```
+Necesita instalar css-loader.
+
+##### HTML
+```html
+<!-- index.html -->
+<html>
+  <head>
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+  </head>
+  <body></body>
+</html>
+```
 
 #### Vía CDN
 
@@ -32,9 +58,9 @@ Importa el CSS utiliando un elemento `<link />`:
 
 ```html
 <!-- minificado -->
-<link href="https://unpkg.com/nes.css@1.0.0/css/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
 <!-- último -->
-<link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
 <!-- solo estilo del núcleo -->
 <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
 ```
@@ -43,13 +69,14 @@ Importa el CSS utiliando un elemento `<link />`:
 
 NES.css no contiene ninguna tipografía, pero recomendamos la siguiente lista de tipografías para utilizar junto a la biblioteca.
 
-| Idioma  | Tipografía                                                               |
-|-----------|--------------------------------------------------------------------|
+| Idioma    | Tipografía                                                         |
+| --------- | ------------------------------------------------------------------ |
 | (Default) | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
-| Inglés   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
-| Japonés  | [美咲フォント](http://www.geocities.jp/littlimi/misaki.htm)          |
-| Japonés  | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                  |
-| Coreano  | [둥근모꼴](http://cactus.tistory.com/193)                            |
+| Inglés    | [Kongtext](https://www.dafont.com/kongtext.font)                   |
+| Japonés   | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
+| Japonés   | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
+| Coreano   | [둥근모꼴](http://cactus.tistory.com/193)                              |
+| Chinoés   | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 
 ## Uso
 
@@ -64,7 +91,7 @@ La tipografía recomendada para utilizar junto a NES.css es [Press Start 2P][pre
 
     <style>
       html, body, pre, code, kbd, samp {
-          font-family: "font-family you want to use";
+          font-family: "font-family que quieres usar";
       }
     </style>
 </head>

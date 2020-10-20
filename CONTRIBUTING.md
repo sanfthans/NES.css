@@ -1,7 +1,7 @@
 # Contributing
 
 View this document in another language:
-[简体中文](.github/CONTRIBUTING-zh-CN.md) / [日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
+[简体中文](.github/CONTRIBUTING-zh-CN.md) / [日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md) / [Русский](.github/CONTRIBUTING-ru.md)
 
 You want to contribute to the project? Awesome!
 
@@ -35,7 +35,8 @@ We're really happy you want to contribute to the project! ❤️ The following s
     ```sh
     $ npm install
     ```
-3. Start up the dev server:
+3. Start up the dev server:  
+    To view all available components in an interactive interface, use storybook.
     ```sh
     $ npm run storybook
     ```
